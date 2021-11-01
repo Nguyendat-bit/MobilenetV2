@@ -52,4 +52,4 @@ if __name__ == '__main__':
     print('---------------------Prediction Result: -------------------')
     image = Image.open(args.test_file)
     plt.imshow(image)
-    print(f'This image is {indices_class[result_indice]} - accuracy: {result[result_indice]}')
+    print(f'This image is {indices_class[result_indice]} - accuracy: {result[0][result_indice]}')
