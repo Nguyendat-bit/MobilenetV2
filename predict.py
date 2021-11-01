@@ -5,7 +5,6 @@ import tensorflow as tf
 from argparse import ArgumentParser
 import sys
 import numpy as np
-from PIL import Image
 
 
 if __name__ == '__main__':
@@ -47,6 +46,4 @@ if __name__ == '__main__':
     result = model(img).numpy()
     result_indice = np.argmax(result)
     print('---------------------Prediction Result: -------------------')
-    image = Image.open(args.test_file)
-    image.show()
     print(f'This image is {indices_class[result_indice]} - accuracy: {result[0][result_indice]}')
