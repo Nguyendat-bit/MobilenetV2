@@ -107,7 +107,7 @@ validation/
 
 Review training on colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JioKrr2GkUIAFWXvPSdoSOeqfp9Sl8hs#scrollTo=SUV1fVmLnav9)
 
 
 Training script:
