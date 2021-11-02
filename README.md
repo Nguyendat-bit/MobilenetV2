@@ -1,5 +1,5 @@
 # MobilenetV2
-My project is using the TensorFlow framework to implement the [MobilenetV2 model](https://arxiv.org/abs/1704.04861) to classify flower images. Give me a star :star2: if you like this repo.
+My project is using the TensorFlow framework to implement the [MobilenetV2 model](https://arxiv.org/abs/1801.04381v4) to classify flower images. Give me a star :star2: if you like this repo.
 
 ### Model Architecture
 The MobileNetV2 network architecture is shown below. The image below is excerpted from the author's original article
@@ -107,7 +107,7 @@ validation/
 
 Review training on colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JioKrr2GkUIAFWXvPSdoSOeqfp9Sl8hs#scrollTo=SUV1fVmLnav9)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1JioKrr2GkUIAFWXvPSdoSOeqfp9Sl8hs?usp=sharing)
 
 
 Training script:
