@@ -168,7 +168,6 @@ Epoch 90/90
 Epoch 00090: val_acc did not improve from 0.88889
 ```
 
-<!-- **FIXME**
 
 
 ## VI. Feedback
