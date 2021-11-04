@@ -27,6 +27,7 @@ class DataLoader():
                 zoom_range= 0.2,
                 horizontal_flip= True,
                 vertical_flip= True,
+                brightness_range= 0.05,
                 fill_mode= 'wrap'
             )
         else:
