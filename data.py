@@ -44,9 +44,12 @@ class DataLoader():
         return data
     
     def build_dataset(self):
-        data =  self.__gen_new_img(self.data_folder,augment= self.augement), self.__gen_new_img(self.val_data_folder, augment= False)
+        val = None
+        if self.val_data_folder != None:
+            val = self.__gen_new_img(self.val_data_folder, augment= False)
+        data =  self.__gen_new_img(self.data_folder,augment= self.augement), val
         # save label 
         with open('label.json', 'w', encoding= 'utf-8') as f:
             json.dump(data[0].class_indices, f)
-
+            
         return data
