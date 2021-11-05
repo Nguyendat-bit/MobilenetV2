@@ -6,7 +6,7 @@ class DataLoader():
     def __init__(self, Data_folder , Validation_Data_folder , augment:bool = True, seed:int = None, batch_size:int = 64, shuffle:bool = True, image_size = (224,224)):
 
         assert Data_folder != None, 'Error, Data_folder is not empty !'
-        assert Validation_Data_folder != None, 'Error, Validation_data_folder is not empty !'
+        
 
         self.seed = seed
         self.augement = augment
