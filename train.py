@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--batch-size', default= 16, type= int)
     parser.add_argument('--train-folder', type= str, required= True)
-    parser.add_argument('--valid-folder', type= str, required= True)
+    parser.add_argument('--valid-folder', type= str, default= None)
     parser.add_argument('--epochs', default= 100, type= int)
     parser.add_argument('--classes', default= 5, type= int)
     parser.add_argument('--lr', default= 0.07, type= float)
@@ -75,7 +75,10 @@ if __name__ == '__main__':
         raise 'Invalid optimizer. Valid option: adam, sgd, rmsprop, adadelta, adamax, adagrad'
 
     # Callback
-    checkpoint = ModelCheckpoint(args.Mobilenetv2_save, monitor= 'val_acc', save_best_only=  True, verbose = 1)
+    if val_data == None:
+        checkpoint = ModelCheckpoint(args.Mobilenetv2_save, monitor= 'acc', save_best_only=  True, verbose = 1)
+    else:
+        checkpoint = ModelCheckpoint(args.Mobilenetv2_save, monitor= 'val_acc', save_best_only=  True, verbose = 1) 
     lr_R = ReduceLROnPlateau(monitor= 'acc', patience= 3, verbose= 1 , factor= 0.5, min_lr= 0.00001)
 
     # Complie optimizer and loss function into model
